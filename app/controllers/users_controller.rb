@@ -17,8 +17,12 @@ class UsersController < ApplicationController
 	end
 
 	def new
+	if current_user.id == 1
   	@user = User.new
+	else
+	redirect_to requests_path
 	end
+end
 
 	def create
   	@user = User.new(params[:user])
