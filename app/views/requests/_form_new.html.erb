@@ -27,10 +27,9 @@
       <% end %>
     </select>
   </div>
-
+  
   <div class="actions">
-    <%= f.submit("actions") 
-     Método:: f.submit, los datos: {confirmar: {'Recuerde que esta clase solo se abrira si cuenta con un minimo de 15 alumnos'}%>
-  </div>
+<input type=submit value="Crear Propuesta" 
+onClick="if(confirm('Recuerde que esta clase solo se abrira si cuenta con 15 Alumnos'));">
+    </div>
 <% end %>
-
