@@ -26,6 +26,7 @@ class UsersController < ApplicationController
 	else
 	redirect_to log_in_path
 end
+end
 
 	def create
   	@user = User.new(params[:user])
