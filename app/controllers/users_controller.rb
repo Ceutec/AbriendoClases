@@ -17,11 +17,14 @@ class UsersController < ApplicationController
 	end
 
 	def new
+	if current_user	
 	if current_user.id == 1
   	@user = User.new
 	else
 	redirect_to requests_path
 	end
+	else
+	redirect_to log_in_path
 end
 
 	def create
